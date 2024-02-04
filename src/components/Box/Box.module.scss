@@ -1,0 +1,42 @@
+/* Thêm các quy tắc CSS mới vào file CSS hoặc module CSS */
+.big {
+    width: 100%;
+    margin: 0 auto; 
+    height: 500px;
+}
+  
+img {
+    display: block;
+    margin: 0 auto; 
+    max-width: 100%; 
+    width: 99%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.small  {
+    width: 32%;
+    height: 500px;
+}
+
+.content   {
+    font-weight: 500;
+    margin-top: 10px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.xsmall {
+    width: 20%;
+    height: 400px;
+}
+
+.medium {
+    width: 50%;
+    height: 300px;
+
+    img {
+        height: 300px;
+    }
+}
+  

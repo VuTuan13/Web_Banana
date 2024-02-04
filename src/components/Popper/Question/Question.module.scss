@@ -1,0 +1,35 @@
+.wrapper    {
+    width: 100%;
+    display: flex;
+    line-height: 3;
+}
+
+.like   {
+    width: 50%;
+    border-right: 1px solid #000;
+    padding-left: 15%;
+
+    .yes, .no {
+        border: 1px solid #000;
+        height: 30px;
+    }
+
+    a {
+        color: blue;
+        cursor: pointer;
+    }
+}
+
+.container  {
+    width: 50%;
+    padding-left: 15%;
+
+    li  {
+        list-style-type: disc;
+    }
+
+    a {
+        color: blue;
+        cursor: pointer;
+    }
+}

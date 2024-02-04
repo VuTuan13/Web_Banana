@@ -1,0 +1,13 @@
+.menu   {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    gap: 16px; 
+    text-align: center;
+    margin-top: 50px;
+    line-height: 1.6;
+
+    a {
+        cursor: pointer;
+    }
+}

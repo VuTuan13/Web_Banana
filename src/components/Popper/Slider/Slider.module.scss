@@ -1,0 +1,36 @@
+.slider {
+    width: 100%;
+    margin: auto;
+  
+  img {
+    width: 99%;
+    height: auto;
+    display: block;
+    max-height: 700px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: transparent;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(100%);
+    background: transparent;
+    border: 1px solid #fff;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+    border-radius: 999px;
+    background-color: #fff;
+    padding: 0 10px;
+  }
+  
+  button:first-child {
+    left: 10px;
+  }
+  
+  button:last-child {
+    right: 10px;
+  }
+}

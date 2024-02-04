@@ -1,0 +1,30 @@
+.wrapper {
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.message    {
+    border: 1px solid #000;
+    font-size: 1.8rem;
+    height: 40px;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        color: blue;
+    }
+}
+
+.container  {
+    margin-top: 20px;
+}
+
+.box    {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around
+}

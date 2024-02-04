@@ -1,0 +1,13 @@
+.wrapper    {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.text   {
+    padding-left: 15px;
+}
