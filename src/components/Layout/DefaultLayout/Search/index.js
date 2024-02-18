@@ -6,6 +6,7 @@ import AccountItem from "~/components/AccountItem";
 import { Wrapper as PopperWrapper } from '~/components/Popper'
 import HeadlessTippy from '@tippyjs/react/headless';
 import { useState, useRef, useEffect } from "react";
+import { useDebounce } from "~/hooks";
 import Button from "~/components/Button";
 
 const cx = classNames.bind(styles);
@@ -15,6 +16,8 @@ function Search() {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const [searchResult, setSearchResult] = useState([]);
+
+  const debounce = useDebounce(searchValue, 500)
   const inputRef = useRef();
 
   const handleSearchButtonClick = () => {
@@ -34,10 +37,17 @@ function Search() {
   }
 
   useEffect(() => {
-    setTimeout(() => {
-        setSearchResult([1, 2, 3]);
-    }, 0)
-    }, [])
+      if (!debounce.trim())
+      {
+        return
+      }
+      fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounce)}&type=less`)
+        .then(res => res.json())
+        .then(res => {
+          setSearchResult(res.data)
+        })
+
+    }, [debounce])
 
   return (
     <div className={cx('wrapper')}>
@@ -49,9 +59,9 @@ function Search() {
             render={(attrs) => (
               <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                 <PopperWrapper>
-                  <AccountItem />
-                  <AccountItem />
-                  <AccountItem />
+                  {searchResult.map((result) => (
+                    <AccountItem key={result.id} data={result}/>
+                  ))}
                 </PopperWrapper>
               </div>
             )}
